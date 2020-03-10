@@ -1,13 +1,10 @@
 FROM homeassistant/home-assistant:latest
-LABEL maintainer="Peter Foreman <peter@frmn.nl>"
+LABEL maintainer="Kevin Blakley"
 
 # Install socat
-RUN apk update && \
-  apk add socat mosquitto-clients mysql-client
+RUN apk update
 
-#RUN apt-get update && \
-#  apt-get -y install socat mosquitto-clients default-mysql-client && \
-#  apt-get clean
+#Create runwatch folder
 RUN mkdir /runwatch
 
 # Run
