@@ -39,6 +39,8 @@ Default: stdout
 
 # Socat options
 
+**SOCAT_ZWAVE_LOG**=/socat_zwave.log
+
 **SOCAT_ZWAVE_TYPE**="tcp"
 
 **SOCAT_ZWAVE_HOST**="192.168.5.5"
@@ -50,6 +52,21 @@ Where socat should connect to. Will be used as tcp://192.168.5.5:7676
 **SOCAT_ZWAVE_LINK**="/dev/zwave"
 
 What the zwave device should be mapped to. Use this in your homeassistant configuration file.
+
+**SOCAT_WYZE_LOG**=/socat_wyze.log
+
+**SOCAT_WYZE_TYPE**="tcp"
+
+**SOCAT_WYZE_HOST**="192.168.5.5"
+
+**SOCAT_WYZE_PORT**="7878"
+
+Where socat should connect to. Will be used as tcp://192.168.5.5:7878
+
+**SOCAT_WYZE_LINK**="/dev/wyze"
+
+What the zwave device should be mapped to. Use this in your homeassistant configuration file.
+
 
 ## Deployment
 
