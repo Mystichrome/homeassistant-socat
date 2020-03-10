@@ -3,10 +3,6 @@
 BINARY="python"
 PARAMS="-m homeassistant --config /config"
 
-if [[ -z "${MYSQL_PORT}" ]]; then
-  MYSQL_PORT=3306
-fi
-
 ######################################################
 
 CMD=$1
@@ -39,24 +35,6 @@ start)
         SOCATCHECK=`pgrep -f "socat"`
         if [ "${SOCATCHECK}" = "" ] >/dev/null 2>&1 ; then
             echo "##### socat is not running, skipping start of home assistant"
-            exit 1
-        fi
-    fi
-
-    if [ "${MYSQL_HOST}" != "" ]; then
-        echo "Checking mysql..."
-        MYSQLCHECK=`mysql -h ${MYSQL_HOST} -u ${MYSQL_USER} -P ${MYSQL_PORT} -p${MYSQL_PASS} -e';'`
-        if [ $? != 0 ]; then
-            echo "##### MySQL is not running, skipping start of home assistant"
-            exit 1
-        fi
-    fi
-
-    if [ "${MQTT_HOST}" != "" ]; then
-        echo "Checking mqtt..."
-        MQTTCHECK=`mosquitto_pub -h ${MQTT_HOST} -u ${MQTT_USER} -P ${MQTT_PASS} -n -t /test`
-        if [ $? != 0 ]; then
-            echo "##### MQTT is not running, skipping start of home assistant"
             exit 1
         fi
     fi
