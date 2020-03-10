@@ -55,24 +55,6 @@ Where socat should connect to. Will be used as tcp://192.168.5.5:7676
 
 What the zwave device should be mapped to. Use this in your homeassistant configuration file.
 
-# MySQL options
-
-**MYSQL_HOST**="1.2.3.4"
-
-**MYSQL_USER**="user"
-
-**MYSQL_PASS**="pass"
-
-# MQTT options
-
-**MQTT_HOST**="localhost"
-
-**MQTT_USER**="hass"
-
-**MQTT_PASS**="hass"
-
-**MQTT_PORT**="3306"
-
 ## Deployment
 
 Example socat on host system:
@@ -100,6 +82,8 @@ Alias=zwave.service
 
 ## Acknowledgements
 
-Based on [homeassistant-home-assistant](https://hub.docker.com/r/homeassistant/home-assistant/) image, [published on docker hub](https://hub.docker.com/r/forepe/homeassistant-socat/).
+Based on [homeassistant-home-assistant](https://hub.docker.com/r/homeassistant/home-assistant/).
 
 Based on [vladbabii/homeassistant-socat](https://hub.docker.com/r/vladbabii/homeassistant-socat).
+
+Based on [peterforeman/homeassistant-socat](https://hub.docker.com/r/forepe/homeassistant-socat).
