@@ -2,14 +2,10 @@
 
 Instead of using a locally-connected zwave device (usbstick/etc), we can use a serial device mapped over the network with ser2net or socat and then map it to a local zwave serial device with socat.
 
-Please [report issues on github](https://github.com/peterforeman/homeassistant-socat/issues).
-
 ## Getting Started
 
 This docker container ensures that:
  - socat is running
- - (optional) mysql is reachable
- - (optional) mqtt is reachable
  - homeassistant is running
 
 If there are any failures, both socat and homeassistant will be restarted.
