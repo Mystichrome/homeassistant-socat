@@ -16,7 +16,7 @@ fi
 
 if [[ -z "${SOCAT_WYZE_LINK}" ]]; then
 
-  SOCAT_WYZE_LINK="/dev/WYZE"
+  SOCAT_WYZE_LINK="/dev/wyze"
 
 fi
 
