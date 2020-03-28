@@ -2,7 +2,8 @@ FROM homeassistant/home-assistant:latest
 LABEL maintainer="Kevin Blakley"
 
 # Install socat
-RUN apk update
+RUN apk update && \
+  apk add socat
 
 #Create runwatch folder
 RUN mkdir /runwatch
